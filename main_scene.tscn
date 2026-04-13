@@ -6,22 +6,22 @@
 script = ExtResource("1_0f027")
 
 [node name="Button" type="Button" parent="." unique_id=462518291]
-offset_left = 386.0
-offset_top = 85.0
-offset_right = 546.0
-offset_bottom = 137.0
+offset_left = 894.0
+offset_top = 527.0
+offset_right = 1054.0
+offset_bottom = 579.0
 text = "Click Me!"
 
 [node name="HappyLabel" type="Label" parent="." unique_id=942262560]
-offset_left = 85.0
-offset_top = 52.0
-offset_right = 140.0
-offset_bottom = 75.0
+offset_left = 894.0
+offset_top = 447.0
+offset_right = 949.0
+offset_bottom = 470.0
 
 [node name="SadLabel" type="Label" parent="." unique_id=220356597]
-offset_left = 85.0
-offset_top = 78.0
-offset_right = 125.0
-offset_bottom = 101.0
+offset_left = 894.0
+offset_top = 473.0
+offset_right = 934.0
+offset_bottom = 496.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

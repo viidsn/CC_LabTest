@@ -51,9 +51,6 @@ func _draw():
 			draw_arc(face["pos"] + Vector2(0, 10),15,0,PI,32,face["color"],2)
 		else:
 			draw_arc(face["pos"] + Vector2(0, 25),15,PI,TAU,32,face["color"],2)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 	
 func _on_button_pressed():
 	generate_faces()
