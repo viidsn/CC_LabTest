@@ -39,19 +39,18 @@ func generate_faces():
 func _draw():
 	for face in faces:
 		# голова
-		draw_circle(face["pos"], face["size"], face["color"])
+		draw_arc(face["pos"], face["size"], 0, TAU, 64, face["color"], 3)
 
 		# глаза
 		for i in range(face["eyes"]):
 			var offset = i * 10
-			draw_circle(face["pos"] + Vector2(offset, -10), 5, Color.BLACK)
+			draw_circle(face["pos"] + Vector2(offset, -10), 5, face["color"])
 
 		# рот
 		if face["happy"]:
-			draw_line(face["pos"] + Vector2(-10, 10), face["pos"] + Vector2(10, 10), Color.BLACK, 2)
+			draw_arc(face["pos"] + Vector2(0, 10),15,0,PI,32,face["color"],2)
 		else:
-			draw_line(face["pos"] + Vector2(-10, 20), face["pos"] + Vector2(10, 20), Color.BLACK, 2)
-
+			draw_arc(face["pos"] + Vector2(0, 25),15,PI,TAU,32,face["color"],2)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
